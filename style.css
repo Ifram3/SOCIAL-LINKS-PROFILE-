@@ -29,6 +29,7 @@
 :root {
     --green: hsl(75, 94%, 57%);
     --white: hsl(0, 0%, 100%);
+    --milk: hsl(0, 10%, 86%);
     --grey-700: hsl(0, 0%, 20%);
     --grey-800: hsl(0, 0%, 12%);
     --grey-900: hsl(0, 0%, 8%);
@@ -49,7 +50,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--size-sm);
+    /* padding: 0 var(--size-sm); */
+    padding-inline: var(--size-sm);
     background-color: var(--grey-900);
     color: var(--white);
     font-family: "Inter", sans-serif;
@@ -77,9 +79,10 @@ body {
 }
 
 img {
-    max-width: 100px;
+    max-width: 6.25rem;
     border-radius: 50%;
-    margin-top: var(--size-md);
+    /* margin-top: var(--size-md); */
+    margin-block-start: var(--size-md);
 }
 
 .details {
@@ -101,7 +104,7 @@ h2 {
 }
 
 p {
-    color: hsl(0, 10%, 86%);
+    color: var(--milk);
     font-weight: 400;
 }
 
@@ -109,13 +112,16 @@ p {
     display: flex;
     flex-direction: column;
     gap: var(--size-xs);
-    margin-bottom: var(--size-md);
+    /* margin-bottom: var(--size-md); */
+    margin-block-end: var(--size-md);
 }
 
 .accts a {
     background-color: var(--grey-700);
     color: var(--white);
-    padding: var(--size-xs) 5rem;
+    /* padding: var(--size-xs) 5rem; */
+    padding-block: var(--size-xs);
+    padding-inline: 5rem;
     text-align: center;
     border-radius: 8px;
     font-weight: 600;
@@ -128,7 +134,9 @@ p {
 
 @media only screen and (min-width: 90em) {
     .accts a {
-        padding: var(--size-xs) 5.63rem;
+        /* padding: var(--size-xs) 5.63rem; */
+        padding-block: var(--size-xs);
+        padding-inline: 5.63rem;
     }
 
     .accts a:hover,
